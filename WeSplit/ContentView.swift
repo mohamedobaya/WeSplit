@@ -53,7 +53,7 @@ struct ContentView: View {
                     Text(checkAmountPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 }
                 
-                Section("Total amount with tips") {
+                Section("Total amount \(tipPercentage == 0 ? "": "with tips")") {
                     Text(checkAmountWithTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 }
             }
